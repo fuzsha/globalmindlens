@@ -618,6 +618,14 @@ main {
   border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
+.contact-card a {
+  color: var(--green-main);
+  text-decoration: none;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
 .form-field {
   margin-bottom: 0.9rem;
 }
@@ -779,6 +787,15 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+}
+
+.footer-contact a {
+  color: var(--grey-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.footer-contact a:hover {
+  color: var(--green-light);
 }
 
 /* ========= ANIMATIONS ========= */
