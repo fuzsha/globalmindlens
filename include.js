@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
       headerPlaceholder.innerHTML = data;
 
       // Auto-highlight current page
-      const currentPage = window.location.pathname.split("/").pop() || "index.html";
+      const normalize = page => (page === "/" || page === "" ? "index.html" : page);
+      const currentPage = normalize(window.location.pathname.split("/").pop());
       document.querySelectorAll(".main-nav a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
+        if (normalize(link.getAttribute("href")) === currentPage) {
           link.classList.add("active");
         }
       });
